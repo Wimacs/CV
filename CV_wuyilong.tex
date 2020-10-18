@@ -1,0 +1,211 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Yilong Wu} \\ \vspace{1pt}
+     \href{mailto:wuyilong2000@outlook.com}{\underline{wuyilong2000@outlook.com}} $|$ 
+    \href{https://github.com/Wimacs}{\underline{github.com/Wimacs}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Electronic Science and Technology of China}{Chengdu, Sichuan, China}
+      {Bachelor of Engineering in Software Engineering, Elite Program }{Aug. 2018 -- Present}
+      \resumeItemListStart
+      	\resumeItem{GPA: 3.72/4.00 CET4: 582/710}
+        \resumeItem{Excellent course: Computer Architecture(95/100), Compiler(92/100), Operating System(92/100)}
+       \resumeItemListEnd：
+    \resumeSubheading
+      {National University of Singapore}{Singapore }
+      {Summer Workshop}{July. 2019 -- Aug 2019}
+       \resumeItemListStart
+      	\resumeItem{Made a pet feeding robot based on Raspberry Pi}
+       \resumeItemListEnd：
+  \resumeSubHeadingListEnd
+
+
+
+
+%-----------PROJECTS-----------
+\section{Selected Graphics Related Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\href{https://github.com/Wimacs/WiRay}{\textbf{WiRay}} $|$ \emph{C++, Intel TBB, Physically based rendering}}{}
+          \resumeItemListStart
+            \resumeItem{Developed a physically based renderer based on nori}
+            \resumeItem{Light Transport Algorithm: PT, BDPT, Photon Mapping, MMLT}
+            \resumeItem{Disney BRDF}
+            \resumeItem{Build LBVH in parallel on the CPU}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\href{https://github.com/Wimacs/WiRay_GPU}{\textbf{WiRay-GPU}} $|$ \emph{C++, CUDA, Physically based rendering}}{}
+          \resumeItemListStart
+            \resumeItem{Developed a interactable Path Tacer on GPU}
+            \resumeItem{Accelerating Data Structure: LBVH, HLBVH, SBVH, TRBVH}
+            \resumeItem{Imgui for debuging}
+            \resumeItemListEnd
+       \resumeProjectHeading
+          {\href{https://github.com/Wimacs/taichi_code/tree/master/apf}{\textbf{PIC vs FLIP vs APIC}} $|$ \emph{Taichi,  Python, Physically based animation}}{}
+          \resumeItemListStart
+            \resumeItem{A hybrid Eulerian–Lagrangian fluid solver}
+            \resumeItem{MAC grid finite difference scheme}
+            \resumeItem{MGPCG for pressure projection}
+            \resumeItem{Bilinear interpolation for P2G and G2P operation}
+           \resumeItemListEnd
+        \resumeProjectHeading
+          {\textbf{\href{https://github.com/Wimacs/taichi_code/tree/master/hw2}{\textbf{PBD}} vs \href{https://github.com/g1n0st/GAMES201/tree/master/hw2}{\textbf{MLS-MPM}} in real-time} $|$ \emph{Taichi,  Python, Physically based animation}}{}
+          \resumeItemListStart
+            \resumeItem{Final project for GAMES 201 \& CCVR entries}
+            \resumeItem{Collision and Stretching constraints in PBD}
+            \resumeItem{ Multi-species model for sand-water coupling}
+           \resumeItemListEnd
+         \resumeProjectHeading
+          {\href{https://github.com/Wimacs/taichi_code/tree/master/hw1}{\textbf{Euler Fluid}} $|$ \emph{Taichi,  Python, Physically based animation}}{}
+          \resumeItemListStart
+            \resumeItem{Jacobi, Gauss-Seidel, CG for pressure projection}
+            \resumeItem{Semi-Lagrangian rk1, Semi-Lagrangian rk2, MacCormack, Advection-Reflection for Advection}
+            \resumeItem{ Real-time and Interactable}
+           \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Honor and Awards}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://www.chinavr.info/news/show/id/3659.html}{National First Prize. China Competition on Virtual Reality -  CCVR 2020}}{Jilin, China }
+      {A survey about the application of material point method in real-time scenarios }{Aug. 2020}
+    \resumeSubheading
+      {\href{http://jsjds.ruc.edu.cn/UploadFiles/202082817196435.pdf}{National Second Prize. Chinese undergraduate computer design contest}}{Shandong, China }
+      {VR games}{Jun. 2020}
+     \resumeSubheading
+      {UESTC school-level scholarship}{Sichuan, China }
+      {}{Oct. 2019}
+ \resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C/C++, Python, Taichi, CUDA, C\#, RISC-V ASM, X86 ASM} \\
+     \textbf{Frameworks}{: OpenGL, Pytorch, Latex, Unity, Unreal... } \\
+     \textbf{Math}{: Calculus, Linear Algebra, Statistics, Probability theory, Numerical Analysis}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
